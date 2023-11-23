@@ -1,0 +1,230 @@
+
+@import 'variables';
+@import 'navbar';
+@import 'intro';
+@import 'services';
+@import 'experience';
+@import 'work';
+@import 'portfolio';
+@import 'testimonial';
+@import 'contact';
+@import 'footer';
+@import 'toggle';
+// @font-face {
+//     font-family: "Gumela";
+//     src: url('/fonts/Roboto-Black.ttf');
+// }
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500&family=Neucha&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap');
+body{
+    // font-family: $-font-gum;
+    font-family: 'Gumela', sans-serif;
+    font-family: 'Edu TAS Beginner', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Neucha', cursive;    
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+
+}
+ 
+.App{
+    padding: 0.5rem 3.5rem;
+    overflow: hidden;
+    color: $clr-black;    
+}
+
+.btn{
+    border-radius: 34px;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    padding: 11px 26px 11px 26px;
+    background: linear-gradient(180deg , #fdc50f 26.71% , #fb982f 99.36%);
+    box-shadow: 0px 20px 24px 3px rgba(251,161,40,.42);
+
+    &:hover{
+        border: 1px solid $clr-orange;
+        background: white;
+        color: $clr-orange;
+        cursor: pointer;
+
+    }
+}
+
+.blur{
+    position: absolute;
+    top:-18%;
+    left: 56%;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: #edd0ff;
+    z-index: -9;
+    filter: blur(27px);
+}
+
+.hd1{
+     
+    color: $clr-black;
+    
+    font-size: 3rem;
+    
+    
+    font-weight: bold;
+    
+}
+.hd2{
+
+    color: $clr-orange;
+
+
+    font-size: 3rem;
+
+
+    font-weight: bold;
+
+}
+
+.para{
+    font-weight: 100;
+    font-size: 14px;    
+    color: $clr-gray;
+    margin-top: 1rem;
+}
+
+.para-sm{
+    font-size: 14px;    
+    color: $clr-gray;
+}
+ 
+.awesome{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+}
+  
+.s-blur2{
+    top: 8rem;
+    left: 14rem;
+}
+.s-blur{
+    top: 13rem;
+    left: -18rem;
+}
+.s-btn{
+    width: 10rem;
+    margin-top: 1rem;
+}
+
+h1,h3{
+    margin: 0;
+    padding: 0;
+}
+
+
+.drk{
+    background: #000;
+    color: #fff;
+
+    .hd1{
+        color: #fff;
+    }
+    .floatingdiv{
+        color: #000;
+    }
+    .circle{
+        color: #000;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .App{
+        padding: 0.5rem 1rem;
+    }
+    .n-list{
+        display: none;
+    }
+    .n-btn{
+        display: none;
+    }
+    .intro{
+        flex-direction: column;
+        height: 66rem;
+        gap: 3rem;
+    }
+    .intro-right{
+        transform: scale(.8);
+        left: -3rem;
+        flex: 2;
+        .blur{
+            display: none;
+        }
+    }
+
+    .intro-icons {
+        margin-top: 1rem;
+    }
+    .services{
+        flex-direction: column;
+        padding: 0.3rem;
+        height: auto;
+        margin: 2rem 0;
+        .cards{
+            display: flex;
+            flex-flow: column;
+            margin-top: 2rem;
+            
+            .card{
+                position: static;
+                margin-bottom: 2rem;
+            }
+        }
+
+        & .cards>*{
+            position: static;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .blur{
+            display: none;
+        }
+    }
+    .experiance {
+        gap: 1rem;   
+        height: auto;
+        padding: .5rem;
+        margin: 2rem 0;
+    }
+
+    .works{
+        padding: .5rem;
+        flex-direction: column;
+
+        .w-right{
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            transform: scale(.8);
+            .w-maincircle{
+                position: static;
+            }
+            .w-back-circle{
+                left:  8rem;
+
+            }
+        }
+    }
+    .contact-wraper{
+        flex-direction: column;
+        padding: .5rem;
+    }
+    
+}
+
+
